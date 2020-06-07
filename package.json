@@ -1,27 +1,48 @@
 {
-  "name": "electron-quick-start-typescript",
+  "name": "security-analizer",
   "version": "1.0.0",
-  "description": "A minimal Electron application written with Typescript",
+  "description": "Security analyzation app.",
+  "author": "Dima Bogdan, Ilya Kisel",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./dist/main.js"
+    "start": "npm run build && electron .",
+    "pack-mac": "electron-builder -m --dir",
+    "dist-mac": "electron-builder -m",
+    "pack-win": "electron-builder -w --dir",
+    "dist-win": "electron-builder -w",
+    "pack": "electron-builder -mw --dir",
+    "dist": "electron-builder -mw"
   },
-  "repository": "https://github.com/electron/electron-quick-start-typescript",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo",
-    "typescript"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "build": {
+    "appId": "security-analizer",
+    "artifactName": "security-analizer",
+    "files": [
+      "dist/main.js",
+      "dist/preload.js"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "portable"
+    }
+  },
   "devDependencies": {
-    "electron": "^6.0.8",
-    "tslint": "^5.19.0",
-    "typescript": "^3.6.0"
+    "@types/electron-localshortcut": "^3.1.0",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
+    "electron": "^8.0.1",
+    "electron-builder": "^22.3.2",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.7.5"
+  },
+  "dependencies": {
+    "@types/electron-localshortcut": "^3.1.0",
+    "electron-localshortcut": "^3.2.1"
   }
 }

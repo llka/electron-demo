@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+
+@font-face {
+    font-family: 'Pangolin', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+html {
+    /*font-family: "Pangolin", sans-serif;*/
+}
+body {
+    margin: 0;
+    padding-top: 65px;
+    background-color: rgb(220, 255, 209);
+}
+* {
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.button_container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #009f6d;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+    width: 8em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.button:active {
+    background-color: #04533d;
+    /*background-color: #f4511e;*/
+}
+.button:hover{
+    background-color: #04533d;
+    /*background-color: #B43114;*/
+}
+.category{
+    display: flex;
+    width: 100%;
+}
+
+.category_checkbox{
+    width: 7%;
+}
+
+.category_title_container{
+    width: 93%;
+}
+
+.category_lvl2_container{
+    padding-left: 10%;
+}
+
+.category_title{
+    cursor: pointer;
+}
+
+.show-on-hover {
+    display: none;
+    font-family: "Pangolin", sans-serif;
+}
+
+.category_title_container:hover .show-on-hover {
+    display: block;
+    font-family: "Pangolin", sans-serif;
+}
+
+#error{
+    color: red;
+    font-weight: bold;
+}
